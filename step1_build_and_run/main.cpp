@@ -1,6 +1,9 @@
 #include <iostream>
+#include <cmath>
+#include <string>
 
 int main(int argc, char const *argv[]) {
-    std::cout << "Hello world!!!" << std::endl;
+    double inputValue = std::stod(argv[1]);
+    std::cout << sqrt(inputValue);
     return EXIT_SUCCESS;
 }
