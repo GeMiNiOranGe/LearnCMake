@@ -1,0 +1,10 @@
+#pragma once
+#ifndef CONFIG_HPP
+#define CONFIG_HPP
+
+#define LearnCMake_VERSION_MAJOR @LearnCMake_VERSION_MAJOR@
+#define LearnCMake_VERSION_MINOR @LearnCMake_VERSION_MINOR@
+#define LearnCMake_VERSION_PATCH @LearnCMake_VERSION_PATCH@
+#define LearnCMake_VERSION_TWEAK @LearnCMake_VERSION_TWEAK@
+
+#endif // end CONFIG_HPP
