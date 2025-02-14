@@ -9,10 +9,10 @@ int main(int argc, char const *argv[]) {
         // report version
         std::cout << argv[0]
                   << " Version "
-                  << LearnCMake_VERSION_MAJOR << "."
-                  << LearnCMake_VERSION_MINOR << "."
-                  << LearnCMake_VERSION_PATCH << "."
-                  << LearnCMake_VERSION_TWEAK << std::endl;
+                  << step1_VERSION_MAJOR << "."
+                  << step1_VERSION_MINOR << "."
+                  << step1_VERSION_PATCH << "."
+                  << step1_VERSION_TWEAK << std::endl;
         std::cout << "Usage: " << argv[0] << " number" << std::endl;
         return EXIT_FAILURE;
     }
