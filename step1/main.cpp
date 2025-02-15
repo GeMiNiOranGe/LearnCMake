@@ -13,7 +13,7 @@ int main(int argc, char const *argv[]) {
                   << step1_VERSION_MINOR << "."
                   << step1_VERSION_PATCH << "."
                   << step1_VERSION_TWEAK << std::endl;
-        std::cout << "Usage: " << argv[0] << " number" << std::endl;
+        std::cout << "Usage: " << argv[0] << " [number]" << std::endl;
         return EXIT_FAILURE;
     }
 
