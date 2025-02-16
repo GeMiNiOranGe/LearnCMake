@@ -35,12 +35,14 @@ cmake -B build -S step1_build_and_run; cmake --build build; clear; build\Debug\m
 # ...
 # ...
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED true)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # set c++ version above this line
 add_executable(main main.cpp)
 ```
+
+> **Note:** From Visual Studio 2022 ([`_MSC_VER`](https://learn.microsoft.com/en-us/cpp/overview/compiler-versions?view=msvc-170) >= 1930), the minimum `C++` standard is `C++14`. If we set `CMAKE_CXX_STANDARD = 11`, `__cplusplus` will still print `201402` instead of `201103`.
 
 ### How to run
 1. _Skip to the compilation steps._

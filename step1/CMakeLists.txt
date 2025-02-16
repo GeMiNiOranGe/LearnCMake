@@ -2,8 +2,12 @@ cmake_minimum_required(VERSION 3.13)
 
 project(step1 VERSION 0.0.1.0)
 
-set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_CXX_STANDARD_REQUIRED true)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+if (MSVC)
+    add_compile_options(/Zc:__cplusplus)
+endif()
 
 configure_file(config.hpp.in config.hpp)
 
