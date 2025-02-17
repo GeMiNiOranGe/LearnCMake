@@ -11,7 +11,7 @@ Resource: [here](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 ### Step by step
 1. Generate `makefile`
 ```
-cmake -B build -S step1_build_and_run
+cmake -B build -S .
 ```
 
 2. Compile
@@ -25,12 +25,12 @@ build\Debug\main.exe
 ```
 Or
 ```
-main.exe
+build\main.exe
 ```
 
 ### All in one
 ```
-cmake -B build -S step1_build_and_run; cmake --build build; clear; build\Debug\main.exe
+cmake -B build -S .; cmake --build build; clear; build\Debug\main.exe
 ```
 
 ## Exercise 2 - Specifying the C++ Standard
@@ -66,7 +66,7 @@ build\Debug\main.exe 25
 # set the 'include' directory for the 'main' target below this line
 add_executable(main main.cpp)
 
-target_include_directories(main PUBLIC "${step1_BINARY_DIR}")
+target_include_directories(main PUBLIC "${LearnCMake_BINARY_DIR}")
 ```
 
 </details>

@@ -9,10 +9,10 @@ int main(int argc, char const *argv[]) {
         // report version
         std::cout << argv[0]
                   << " Version "
-                  << step1_VERSION_MAJOR << "."
-                  << step1_VERSION_MINOR << "."
-                  << step1_VERSION_PATCH << "."
-                  << step1_VERSION_TWEAK << std::endl;
+                  << LEARN_CMAKE_VERSION_MAJOR << "."
+                  << LEARN_CMAKE_VERSION_MINOR << "."
+                  << LEARN_CMAKE_VERSION_PATCH << "."
+                  << LEARN_CMAKE_VERSION_TWEAK << std::endl;
         std::cout << "Usage: " << argv[0] << " [number]" << std::endl;
         return EXIT_FAILURE;
     }
