@@ -66,7 +66,7 @@ build\Debug\main.exe 25
 # set the 'include' directory for the 'main' target below this line
 add_executable(main main.cpp)
 
-target_include_directories(main PUBLIC "${LearnCMake_BINARY_DIR}")
+target_include_directories(main PUBLIC "${learn_cmake_BINARY_DIR}")
 ```
 
 </details>

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(LearnCMake VERSION 0.0.1.0)
+project(learn_cmake VERSION 0.0.1.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # print project version
 message(STATUS "")
 message(STATUS "==============================================")
-message(STATUS "LearnCMake version: ${PROJECT_VERSION}")
+message(STATUS "learn_cmake version: ${PROJECT_VERSION}")
 message(STATUS "==============================================")
 message(STATUS "")
 
@@ -18,12 +18,12 @@ endif()
 
 configure_file(config.hpp.in config.hpp)
 
-add_executable(main main.cpp)
+add_executable(${PROJECT_NAME} main.cpp)
 
-target_include_directories(main PUBLIC "${LearnCMake_BINARY_DIR}")
+target_include_directories(${PROJECT_NAME} PUBLIC "${learn_cmake_BINARY_DIR}")
 
 # print binary dir
 # message(STATUS "")
 # message(STATUS "PROJECT(Main) bin dir: ${PROJECT_BINARY_DIR}")
-# message(STATUS "LearnCMake(Sub) bin dir: ${LearnCMake_BINARY_DIR}")
+# message(STATUS "learn_cmake(Sub) bin dir: ${learn_cmake_BINARY_DIR}")
 # message(STATUS "")
