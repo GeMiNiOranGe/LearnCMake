@@ -55,6 +55,10 @@ add_executable(main main.cpp)
 ```
 build\Debug\main.exe 25
 ```
+Or
+```
+build\main.exe
+```
 
 ## Exercise 3 - Adding a Version Number and Configured Header File
 ```cmake
