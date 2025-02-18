@@ -18,9 +18,17 @@ endif()
 
 configure_file(config.hpp.in config.hpp)
 
+add_subdirectory(MathFunctions)
+
 add_executable(${PROJECT_NAME} main.cpp)
 
-target_include_directories(${PROJECT_NAME} PUBLIC "${learn_cmake_BINARY_DIR}")
+target_link_libraries(${PROJECT_NAME} PUBLIC MathFunctions)
+
+target_include_directories(
+    ${PROJECT_NAME} PUBLIC
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/MathFunctions"
+)
 
 # print binary dir
 # message(STATUS "")

@@ -5,7 +5,7 @@ Resource: [here](https://cmake.org/cmake/help/latest/guide/tutorial/index.html)
 <details>
     <summary>Step 1: Build and Run</summary>
 
-## Exercise 1: Building a Basic Project
+## Exercise 1 - Building a Basic Project
 > More info: [here](https://cmake.org/cmake/help/latest/manual/cmake.1.html#generate-a-project-buildsystem)
 
 ### Step by step
@@ -71,6 +71,44 @@ build\main.exe
 add_executable(main main.cpp)
 
 target_include_directories(main PUBLIC "${learn_cmake_BINARY_DIR}")
+```
+
+</details>
+
+<details>
+    <summary>Step 2: Adding a Library</summary>
+
+## Exercise 1 - Creating a Library
+### How to use `add_subdirectory` in top level `CMakeList.txt`
+```cmake
+# other cmake config ...
+# ...
+# ...
+# ...
+
+add_subdirectory(MathFunctions)
+
+# putting `add_subdirectory` above this line.
+add_executable(${PROJECT_NAME} main.cpp)
+```
+
+### How to use `target_link_libraries` in top level `CMakeList.txt`
+```cmake
+# other cmake config ...
+# ...
+# ...
+# ...
+
+add_executable(${PROJECT_NAME} main.cpp)
+
+# we should put `target_link_libraries` between `add_executable` and `target_include_directories`
+target_link_libraries(${PROJECT_NAME} PUBLIC MathFunctions)
+
+target_include_directories(
+    ${PROJECT_NAME} PUBLIC
+    "${PROJECT_BINARY_DIR}"
+    "${PROJECT_SOURCE_DIR}/MathFunctions"
+)
 ```
 
 </details>

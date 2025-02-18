@@ -1,7 +1,7 @@
-#include <cmath>
 #include <iostream>
 #include <string>
 
+#include "MathFunctions.hpp"
 #include "config.hpp"
 
 int main(int argc, char const *argv[]) {
@@ -18,6 +18,6 @@ int main(int argc, char const *argv[]) {
     }
 
     double inputValue = std::stod(argv[1]);
-    std::cout << sqrt(inputValue);
+    std::cout << math_functions::sqrt(inputValue);
     return EXIT_SUCCESS;
 }
