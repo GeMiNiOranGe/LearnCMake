@@ -31,3 +31,6 @@ target_include_directories(
     "${PROJECT_SOURCE_DIR}/MathFunctions"
 )
 ```
+
+## Exercise 2 - Adding an Option
+The `USE_MYMATH` variable is stored in `CMakeCache`.
