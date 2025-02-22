@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(LearnCMake VERSION 0.0.1.0)
+project(LearnCMake VERSION 0.0.1.0 LANGUAGES CXX)
 
 # include cmake code
 include(cmake/utilities.cmake)
